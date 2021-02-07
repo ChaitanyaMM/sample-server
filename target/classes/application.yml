@@ -1,0 +1,29 @@
+server:
+  port: 8069
+
+spring:
+  application:
+    name: sample-service
+  zipkin:
+   enabled: true
+   base-url: http://localhost:9411/
+   cloud:
+     config:
+      server:
+      native:
+       search-locations: file:///home/chaitanya/chy/practice_workspace/config-server/src/main/resources/sample-application
+   #    git:
+   #      uri :https://github.com/chaitanyaMM/config-server
+
+  
+eureka:
+  client:
+   serviceUrl:
+       defaultZone : http://localhost:8065/eureka
+       registerWithEureka: false
+       fetchRegistry : true
+       
+       
+casename: bkc
+
+
